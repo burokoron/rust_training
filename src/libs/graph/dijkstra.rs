@@ -27,7 +27,6 @@ fn main() {
     }
 
     // node[0]を始点としたすべての点に対する最短経路探索
-    // 変数4つ目の書き方が謎、また調べる
     // HashMap(NodeIndex, cost)
     let path = dijkstra(&gr, node[0], None, |e| *e.weight());
 
