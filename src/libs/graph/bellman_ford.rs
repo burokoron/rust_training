@@ -1,9 +1,9 @@
 /*
 petgraphライブラリを用いたグラフにおける最短経路探索
 始点ノードからすべての点に対する最短経路を求める
+コストが負でも使えるが、重い
 
 例題
-Typical90_003：https://atcoder.jp/contests/typical90/tasks/typical90_c
 
 */
 
