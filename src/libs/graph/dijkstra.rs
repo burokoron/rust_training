@@ -23,13 +23,13 @@ fn main() {
         node.push(gr.add_node(()));
     }
     for &(a, b) in &ab {
-        gr.add_edge(node[a as usize -1], node[b as usize - 1], 1.);
+        gr.add_edge(node[a as usize -1], node[b as usize - 1], 1);
     }
 
     // node[0]を始点としたすべての点に対する最短経路探索
     // 変数4つ目の書き方が謎、また調べる
     // HashMap(NodeIndex, cost)
-    let path = dijkstra(&gr, node[0], None, |_| 1);
+    let path = dijkstra(&gr, node[0], None, |e| *e.weight());
 
     // 始点node[0]から最も遠いノードを調べるなら
     let mut max_weight = 0;
